@@ -1,0 +1,334 @@
+body {
+    font-family: "Zen Kaku Gothic Antique", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.7;
+    transition: all 0.5s ease-in;
+}
+
+/* index.php */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+header h1 {
+    width: 150px;
+    margin: 0 auto;
+}
+main {
+    padding: 50px 0;
+}
+.edit {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    gap: 10px;
+}
+.edit li:first-child {
+    border-right: 1px solid #333;
+    padding-right: 10px;
+}
+/* 評価部分 */
+.input-range {
+    display: none;
+}
+.range-group {
+    position: relative;
+}
+.stars .rec_value {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+.stars .rec_value:before {
+    content: "★";
+    font-size: 20px;
+    color: #aaa;
+}
+.stars .rec_value.on:before {
+    content: "★";
+    color: #fc3;
+}
+/* フォームレイアウト */
+form {
+    width: 800px;
+    margin: 0 auto;
+}
+form h2 {
+    margin-bottom: 5px;
+}
+form > div {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 200px 600px;
+}
+form input {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+form input[type=text] {
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
+}
+form select {
+    width: 200px;
+    height: 35px;
+    padding: 0 10px;
+}
+form textarea {
+    padding: 10px;
+}
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+form label input {
+    margin-right: 10px;
+}
+.submit button {
+    grid-column: 2/3;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #bfdad1;
+    font-size: 16px;
+}
+
+/* read.php */
+.container {
+    width: 360px;
+    margin: 0 auto;
+}
+.container h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.container figure {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1254 / 839;
+}
+.container figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.archive {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    align-items: center;
+    gap: 30px 20px;
+}
+.point {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+}
+.point li {
+    font-size: 11px;
+    background: #f09d9d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* single.php */
+.single {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.single h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 30px;
+}
+.single figure {
+    margin-bottom: 30px;
+}
+.back {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+.back a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #666;
+}
+.point {
+    margin-bottom: 20px;
+}
+.memo {
+    line-height: 1.7;
+    margin: 20px 0;
+}
+#map {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+/* write.php */
+.complete {
+    text-align: center;
+    margin: 200px 0;
+}
+
+/* 検索 */
+.search {
+    background: #eee;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.search form div {
+    display: block;
+    margin-bottom: 50px;
+}
+.search form div h2 {
+    border-bottom: 1px solid #666;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.search .check_area {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 20px 0;
+}
+.search .submit {
+    margin: 0;
+}
+.null_mes {
+    text-align: center;
+    margin: 100px 0;
+}
+
+/* nav */
+.menu {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 20px;
+    right: 0;
+    margin-top: 50px;
+    padding: 0 0 10px 0;
+    transition: 0.3s linear;
+    transform: scale(1, 0);
+    transform-origin: top;
+    background: #fff;
+    z-index: 999;
+}
+
+.menu li {
+    border-bottom: 1px solid rgb(75, 75, 75);
+    padding: 15px 0;
+    margin: 0 54px;
+}
+
+/* メニューボタン */
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked~.menu {
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: 0.3 linear;
+}
+
+.menu-icon {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navicon {
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 26px;
+    position: relative;
+    transition: 0.3 linear;
+    z-index: 2;
+}
+
+.navicon:before,
+.navicon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #333;
+    transition: 0.3s linear;
+}
+
+.navicon::before {
+    top: 9px;
+}
+
+.navicon:after {
+    bottom: 9px;
+}
+
+/* ハンバーガーメニューアニメーション */
+.menu-btn:checked~.menu-icon .navicon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon:after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.2s linear;
+}
+
+/* エラーメッセージ */
+.message {
+    width: 800px;
+    margin: 0 auto 30px;
+    border: 1px solid #999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.message li {
+    margin-top: 10px;
+    font-size: 12px;
+    list-style: disc inside;
+}
+form p {
+    margin-bottom: 30px;
+    font-size: 12px;
+}
