@@ -159,9 +159,8 @@ $selectedPref = $v["pref"];
             <h2>写真＊</h2>
             <div class="image-preview-container">
                 <div>
-                    <input type="file" name="img" accept="image/*" multiple>
-                    <img src="img/<?= h($v["images"]) ?>" alt="Uploaded Image">
-                    <p><?= h($v["images"]) ?></p>
+                    <input type="file" name="img" accept="image/*" class="file" multiple>
+                    <img class="img_prev" src="img/<?= h($v["images"]) ?>" alt="Uploaded Image">
                 </div>
             </div>
         </div>
