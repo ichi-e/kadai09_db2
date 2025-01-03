@@ -11,7 +11,6 @@ $success = $_SESSION['success'];
 $points = $inputData['point'];
 $img = $_SESSION['img_data'];
 $insert = $_SESSION['from_insert'];
-var_dump($_SESSION['from_insert']);
 
 // セッションをリセット
 if($success !== null || $_SESSION['from_insert'] !== true){
