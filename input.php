@@ -10,10 +10,19 @@ $inputData = $_SESSION['input_data'];
 $success = $_SESSION['success'];
 $points = $inputData['point'];
 $img = $_SESSION['img_data'];
+$insert = $_SESSION['from_insert'];
+var_dump($_SESSION['from_insert']);
 
 // セッションをリセット
-if($success !== null){
-    unset($errors, $_SESSION['errors'], $inputData, $_SESSION['input_data'], $_SESSION['success'], $points, $inputData['point'], $img, $_SESSION['img_data']);
+if($success !== null || $_SESSION['from_insert'] !== true){
+    unset($_SESSION['errors'], $_SESSION['input_data'], $_SESSION['success'], $inputData['point'], $_SESSION['img_data']);
+    $errors = null;
+    $inputData = null;
+    $points = null;
+    $img = null;
+} else {
+    // フラグを消す
+    unset($_SESSION['from_insert']);
 }
 
 include('pref.php');

@@ -52,6 +52,7 @@ if (empty($_POST['comment'])) {
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
     $_SESSION['input_data'] = $_POST;
+    $_SESSION['from_insert'] = true;
     header('Location: input.php');
     exit(); // エラーがあれば以降の処理を止める
 }
